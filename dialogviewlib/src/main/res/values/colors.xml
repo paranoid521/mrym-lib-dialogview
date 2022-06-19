@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#fe5500</color>
+    <!-- Search Background gray -->
+    <color name="gray_search_bg">#f6f7f8</color>
+    <color name="stroke_gray">#b5b5bf</color>
+    <!-- good article title color -->
+    <color name="good_article_title_color">#333333</color>
+
+    <!-- CardView title color -->
+    <color name="card_view_white">#ffffff</color>
+    <color name="card_view_black">#000000</color>
+    <color name="card_view_gray_deep">#4c4c4c</color>
+    <color name="card_view_gray">#888888</color>
+
+    <!-- WebView Toolbar color -->
+    <color name="web_view_white">#ffffff</color>
+
+    <!-- 透明 #0e000000 -->
+    <color name="transparent">#0e000000</color>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_margin">4dp</dimen>
+    <dimen name="fab_margin">66dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+
+    <dimen name="mine_avatar_size">60dp</dimen>
+
+    <dimen name="inner_layout_margin_smm">2dp</dimen>
+    <dimen name="inner_layout_margin_sm">4dp</dimen>
+    <dimen name="inner_layout_margin_sm2">8dp</dimen>
+    <dimen name="inner_layout_margin_s">8dp</dimen>
+    <dimen name="inner_layout_margin_m">12dp</dimen>
+    <dimen name="inner_layout_margin_l">16dp</dimen>
+    <dimen name="inner_layout_margin_lX">32dp</dimen>
+    <dimen name="inner_layout_margin_lXX">48dp</dimen>
+    <dimen name="inner_layout_margin_lXXX">56dp</dimen>
+
+    <dimen name="inner_layout_margin_big_sm">60dp</dimen>
+    <dimen name="inner_layout_margin_big_s">64dp</dimen>
+    <dimen name="inner_layout_margin_big_m">68dp</dimen>
+    <dimen name="inner_layout_margin_big_l">72dp</dimen>
+    <dimen name="inner_layout_margin_big_lx">76dp</dimen>
+    <dimen name="inner_layout_margin_big_lxx">78dp</dimen>
+    <dimen name="inner_layout_margin_big_lxxx">82dp</dimen>
+    <dimen name="inner_layout_margin_big_xl">86dp</dimen>
+    <dimen name="inner_layout_margin_big_xlx">90dp</dimen>
+    <dimen name="inner_layout_margin_big_xlxx">92dp</dimen>
+    <dimen name="inner_layout_margin_big_xlxxx">96dp</dimen>
+
+    <dimen name="inner_button_layout_margin">0dp</dimen>
+    <dimen name="h1">32sp</dimen>
+    <dimen name="h2_0">28sp</dimen>
+    <dimen name="h2">24sp</dimen>
+    <dimen name="h2_1">22sp</dimen>
+    <dimen name="h2_2">20sp</dimen>
+    <dimen name="h3">18sp</dimen>
+    <dimen name="h3_1">16sp</dimen>
+    <dimen name="h4_0">14sp</dimen>
+    <dimen name="h4">12sp</dimen>
+    <dimen name="h5">8sp</dimen>
+    <dimen name="h6">4sp</dimen>
+</resources>
