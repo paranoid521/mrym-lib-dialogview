@@ -34,25 +34,31 @@
         <RadioGroup
             android:id="@+id/daoyin_setting"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/inner_layout_margin_l"
+            android:layout_gravity="center"
+            >
 
-            <RadioButton
-                android:id="@+id/fast_pattern"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="快速模式"
-                android:textColor="#1B0606" />
+<!--            <RadioButton-->
+<!--                android:button="@drawable/selector_radio"-->
+<!--                android:id="@+id/fast_pattern"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="快速模式"-->
+<!--                android:textColor="#1B0606" />-->
 
-            <RadioButton
-                android:id="@+id/detail_pattern"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="详细模式"
-                android:textColor="#1B0606" />
+<!--            <RadioButton-->
+<!--                android:button="@drawable/selector_radio"-->
+<!--                android:id="@+id/detail_pattern"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="详细模式"-->
+<!--                android:textColor="#1B0606" />-->
+
         </RadioGroup>
 
         <TextView
-            android:id="@+id/message2"
+            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

@@ -1,6 +1,9 @@
 package xyz.mrym.applibs.dialogviewlib.widget.setting;
 
 import android.content.Context;
+import android.widget.RadioButton;
+
+import java.util.List;
 
 public class ShowSettingDialog {
 
@@ -26,11 +29,17 @@ public class ShowSettingDialog {
     public void showSettingDialog(Context context,
                                   MySettingDialog.onRadioOnclickListenerApi onRadioOnclickListenerApi,
                                   MySettingDialog.onYesOnclickListener onYesOnclickListener,
-                                  String defaultRadioButton) {
+                                  int defaultRadioButtonId,
+                                  String title, String message, String description,
+                                  List<RadioButton> radioButtonList) {
         mySettingDialog = new MySettingDialog(context);
         mySettingDialog.setRadioOnclickListener(onRadioOnclickListenerApi);
         mySettingDialog.setYesOnclickListener(onYesOnclickListener);
-        mySettingDialog.setDefaultRadioButton(defaultRadioButton);
+        mySettingDialog.setDefaultRadioButton(defaultRadioButtonId);
+        mySettingDialog.setTitle(title);
+        mySettingDialog.setMessage(message);
+        mySettingDialog.setDescription(description);
+        mySettingDialog.setRadioButtonList(radioButtonList);
         mySettingDialog.show();
     }
 
