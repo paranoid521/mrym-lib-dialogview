@@ -19,29 +19,43 @@ import xyz.mrym.applibs.dialogviewlib.R;
 
 
 public class MySettingDialog extends Dialog {
-    private Button yesButton;//确定按钮
+    // 确定按钮
+    private Button yesButton;
     private RadioGroup settingRadioGroup;
-    private TextView titleTextView;//消息标题文本
-    private TextView messageTextView;//消息提示文本
-    private TextView descriptionTextView;//消息提示文本
+    // 消息标题文本
+    private TextView titleTextView;
+    // 消息提示文本
+    private TextView messageTextView;
+    // 消息提示文本
+    private TextView descriptionTextView;
     private List<RadioButton> radioButtonList;
 
-    private onYesOnclickListener yesOnclickListener;//确定按钮被点击了的监听器
-    private onRadioOnclickListenerApi onRadioOnclickListenerApi;//确定按钮被点击了的监听器
+    // 确定按钮被点击了的监听器
+    private onYesOnclickListener yesOnclickListener;
+    // 确定按钮被点击了的监听器
+    private onRadioOnclickListenerApi onRadioOnclickListenerApi;
 
     private int defaultRadioButtonId;
-    private String titleStr;//从外界设置的title文本
-    private String messageStr;//从外界设置的消息文本
-    private String descriptionStr;//从外界设置的消息文本
+    // 从外界设置的title文本
+    private String titleStr;
+    // 从外界设置的消息文本
+    private String messageStr;
+    // 从外界设置的消息文本
+    private String descriptionStr;
 
-    public void setDefaultRadioButton(int defaultRadioButtonText) {
+    /**
+     * 配置默认选项
+     *
+     * @param defaultRadioButtonId 默认选项ID
+     */
+    public void setDefaultRadioButton(int defaultRadioButtonId) {
         this.defaultRadioButtonId = defaultRadioButtonId;
     }
 
     /**
      * 设置确定按钮的显示内容和监听
      *
-     * @param onYesOnclickListener
+     * @param onYesOnclickListener 确认按钮监听器
      */
     public void setYesOnclickListener(onYesOnclickListener onYesOnclickListener) {
         this.yesOnclickListener = onYesOnclickListener;
@@ -50,7 +64,7 @@ public class MySettingDialog extends Dialog {
     /**
      * 设置确定按钮的显示内容和监听
      *
-     * @param onRadioOnclickListener
+     * @param onRadioOnclickListener 按钮监听器
      */
     public void setRadioOnclickListener(onRadioOnclickListenerApi onRadioOnclickListener) {
         this.onRadioOnclickListenerApi = onRadioOnclickListener;
@@ -65,14 +79,14 @@ public class MySettingDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_setting);
-        //按空白处不能取消动画
+        // 按空白处不能取消动画
         setCanceledOnTouchOutside(false);
-        //初始化界面控件
+        // 初始化界面控件
         titleTextView = findViewById(R.id.title);
         messageTextView = findViewById(R.id.message);
         descriptionTextView = findViewById(R.id.description);
         yesButton = findViewById(R.id.yes);
-        //初始化界面控件的事件，设置确定按钮被点击后，向外界提供监听
+        // 初始化界面控件的事件，设置确定按钮被点击后，向外界提供监听
         yesButton.setOnClickListener(v -> {
             if (yesOnclickListener != null) {
                 yesOnclickListener.onYesClick();
@@ -95,9 +109,8 @@ public class MySettingDialog extends Dialog {
                 settingRadioGroup.removeView(radioButton);
                 settingRadioGroup.addView(radioButton, radioButtonList.indexOf(radioButton));
                 int radioButtonId = radioButton.getId();
-                if (radioButtonId == defaultRadioButtonId) {
+                if (radioButton.getId() == defaultRadioButtonId) {
                     settingRadioGroup.check(radioButtonId);
-                    break;
                 }
             }
         }
@@ -123,7 +136,7 @@ public class MySettingDialog extends Dialog {
      * 初始化界面控件的显示数据
      */
     private void initData() {
-        //如果用户自定了title和message
+        // 如果用户自定了title和message
         if (titleStr != null) {
             titleTextView.setText(titleStr);
         }
@@ -138,7 +151,7 @@ public class MySettingDialog extends Dialog {
     /**
      * 从外界Activity为Dialog设置标题
      *
-     * @param title
+     * @param title 标题
      */
     public void setTitle(String title) {
         titleStr = title;
@@ -147,7 +160,7 @@ public class MySettingDialog extends Dialog {
     /**
      * 从外界Activity为Dialog设置dialog的message
      *
-     * @param message
+     * @param message 对话框详情
      */
     public void setMessage(String message) {
         messageStr = message;
@@ -156,7 +169,7 @@ public class MySettingDialog extends Dialog {
     /**
      * 从外界Activity为Dialog设置dialog的message
      *
-     * @param description
+     * @param description 对话框描述
      */
     public void setDescription(String description) {
         descriptionStr = description;
@@ -165,7 +178,7 @@ public class MySettingDialog extends Dialog {
     /**
      * 从外界Activity为Dialog设置dialog的message
      *
-     * @param radioButtons
+     * @param radioButtons 选项列表
      */
     public void setRadioButtonList(List<RadioButton> radioButtons) {
         radioButtonList = radioButtons;
